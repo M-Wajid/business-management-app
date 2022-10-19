@@ -1,4 +1,4 @@
-import { Typography, useMediaQuery } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { BannerContainer, BannerContent, BannerDescription, BannerImage, BannerTitle } from "../../styles/banner";
 
@@ -10,11 +10,10 @@ export default function Banner() {
 
     return (
         <BannerContainer>
-            <BannerImage src=""/>
+            <BannerImage src="/images/banner/5.jpg"/>
             <BannerContent>
-                <Typography variant="h6">Huge Collection</Typography>
-                <BannerTitle variant='h2'>New Bags</BannerTitle>
-                <BannerDescription variant="subtitle">lorem</BannerDescription>
+                <BannerTitle variant='h2'>Building Designs</BannerTitle>
+                <BannerDescription variant="subtitle">for Sale</BannerDescription>
             </BannerContent>
         </BannerContainer>
     );
