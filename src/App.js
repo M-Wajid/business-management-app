@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from '@mui/system';
+import { AppBar, Button} from '@mui/material';
+import { useEffect } from 'react';
+import theme from './styles/theme';
+import Appbar from './components/appbar';
 
 function App() {
+  useEffect(()=>{
+    document.title = "Business Management App";
+  },[]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <container
+        maxwidth = "xl"
+        sx = {{
+          backgroud: '#fff'
+        }}
+      >
+        <Appbar />
+        {
+          /*
+          Banner
+          Promotion
+          title
+          Products
+          footer
+          Search box
+          Appdrawer
+          */
+        }
+        <Button variant='contained'>test</Button>
+      </container>
+    </ThemeProvider>
   );
 }
 
