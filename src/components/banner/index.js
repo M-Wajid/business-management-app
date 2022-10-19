@@ -1,16 +1,16 @@
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import AppbarDesktop from "./appbarDesktop";
-import AppbarMobile from "./appbarMobile";
+import { BannerContainer } from "../../styles/banner";
 
 
-export default function Appbar() {
 
+export default function Banner() {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('md'));
+
     return (
-        <>
-            {matches ? <AppbarMobile /> : <AppbarDesktop />}
-        </>
+        <BannerContainer>
+            <h1>Banner</h1>
+        </BannerContainer>
     );
 }

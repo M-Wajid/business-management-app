@@ -1,8 +1,9 @@
 import { ThemeProvider } from '@mui/system';
-import { AppBar, Button} from '@mui/material';
+import { AppBar, Button, Container} from '@mui/material';
 import { useEffect } from 'react';
 import theme from './styles/theme';
 import Appbar from './components/appbar';
+import Banner from './components/banner';
 
 function App() {
   useEffect(()=>{
@@ -11,16 +12,16 @@ function App() {
   
   return (
     <ThemeProvider theme={theme}>
-      <container
+      <Container
         maxwidth = "xl"
         sx = {{
           backgroud: '#fff'
         }}
       >
         <Appbar />
+        <Banner/>
         {
           /*
-          Banner
           Promotion
           title
           Products
@@ -29,8 +30,7 @@ function App() {
           Appdrawer
           */
         }
-        <Button variant='contained'>test</Button>
-      </container>
+      </Container>
     </ThemeProvider>
   );
 }
