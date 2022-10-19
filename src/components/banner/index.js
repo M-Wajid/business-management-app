@@ -11,6 +11,7 @@ export default function Banner() {
     return (
         <BannerContainer>
             <h1>Banner</h1>
+            <h1>Banner</h1>
         </BannerContainer>
     );
 }
