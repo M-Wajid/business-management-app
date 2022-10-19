@@ -3,6 +3,7 @@ import { ActionIconsContainerDesktop, ActionIconsContainerMobile, MyList } from 
 import PersonIcon from '@mui/icons-material/Person';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Colors } from '../../styles/theme';
 
 export default function Actions({matches}) {
     const Component = matches? ActionIconsContainerMobile: ActionIconsContainerDesktop;
@@ -19,7 +20,8 @@ export default function Actions({matches}) {
                     <ListItemIcon
                         sx ={{
                             display: 'flex',
-                            justifyContent: "center"
+                            justifyContent: "center",
+                            color: matches && Colors.secondary,
                         }}
                     >
                         <LoginIcon />
@@ -36,7 +38,8 @@ export default function Actions({matches}) {
                     <ListItemIcon
                         sx ={{
                             display: 'flex',
-                            justifyContent: "center"
+                            justifyContent: "center",
+                            color: matches && Colors.secondary,
                         }}
                     >
                         <LogoutIcon />
@@ -54,7 +57,8 @@ export default function Actions({matches}) {
                     <ListItemIcon
                         sx ={{
                             display: 'flex',
-                            justifyContent: "center"
+                            justifyContent: "center",
+                            color: matches && Colors.secondary,
                         }}
                     >
                         <PersonIcon />

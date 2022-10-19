@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@mui/system';
-import { AppBar, Button, Container} from '@mui/material';
+import {Container} from '@mui/material';
 import { useEffect } from 'react';
 import theme from './styles/theme';
 import Appbar from './components/appbar';
