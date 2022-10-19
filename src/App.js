@@ -19,7 +19,7 @@ function App() {
         }}
       >
         <Appbar />
-        <Banner/>
+        <Banner />
         {
           /*
           Promotion

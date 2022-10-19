@@ -2,6 +2,7 @@ import { IconButton } from "@mui/material";
 import { AppbarContainer, AppbarHeader } from "../../styles/appbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import Actions from "./actions";
+import SearchIcon from "@mui/icons-material/Search"
 
 
 export default function AppbarMobile({matches}) {
@@ -11,8 +12,11 @@ export default function AppbarMobile({matches}) {
             <IconButton>
                 <MenuIcon />
             </IconButton>
-            <AppbarHeader sx={{padding: '0px 0px 0px 120px'}} textAlign={'center'} variant = 'h4'>Jalazai Design</AppbarHeader>
-            <Actions/>
+            <AppbarHeader textAlign={'center'} variant = 'h4'>Jalazai Design</AppbarHeader>
+            <IconButton>
+                <SearchIcon />
+            </IconButton>
+            <Actions matches = {matches} />
         </AppbarContainer>
      );
 }
