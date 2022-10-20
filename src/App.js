@@ -5,8 +5,7 @@ import theme from './styles/theme';
 import Appbar from './components/appbar';
 import Banner from './components/banner';
 import Footer from './components/footer';
-import Appdrawer from './components/drawer';
-import Searchbox from './components/search';
+
 
 function App() {
   useEffect(()=>{

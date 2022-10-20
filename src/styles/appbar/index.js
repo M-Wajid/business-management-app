@@ -13,12 +13,20 @@ export const AppbarContainer = styled(Box)(()=>({
     padding: '2px 8px'
 }));
 
+export const Logo = styled('img')(({src, theme}) =>({
+    src: `url(${src})`,
+    width: '200px',
+    [theme.breakpoints.down('md')]:{
+        width: '100px' 
+    }
+}));
+
 //header 
 export const AppbarHeader = styled(Typography)(() => ({
     padding: "4px",
-    flexGrow: 1,
-    fontSize: "4em",
-    fontFamily: '"Montez", "cursive"',
+    flexGrow: 0,
+    fontSize: "3em",
+    fontFamily: '"Montez", "cursive',
     color: Colors.secondary,
   }));
 

@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@fontsource/black-ops-one": "^4.5.9",
     "@fontsource/montez": "^4.5.10",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.9",
