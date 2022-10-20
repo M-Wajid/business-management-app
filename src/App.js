@@ -24,7 +24,6 @@ function App() {
         <Appbar />
         <Banner />
         <Footer/>
-        <Searchbox />
       </Container>
     </ThemeProvider>
   );
