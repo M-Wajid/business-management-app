@@ -43,6 +43,15 @@ export const Colors = {
                 disableRipple: true,
                 disableElevation: true
             }
+        },
+        MuiDrawer: {
+            styleOverrides: {
+                paper: {
+                    width: 250,
+                    background: Colors.primary,
+                    color: Colors.secondary,
+                }
+            }
         }
     }
   });

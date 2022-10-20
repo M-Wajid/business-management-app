@@ -16,7 +16,6 @@ export default function AppbarDesktop ({matches}) {
             <ListItemText primary = "Services" />
             <ListItemText primary = "Portfolio" />
             <ListItemText primary = "Projects" />
-            <ListItemText primary = "About Us" />
             <ListItemButton>
                 <ListItemIcon>
                     <SearchIcon />

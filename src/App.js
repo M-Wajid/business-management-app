@@ -4,6 +4,9 @@ import { useEffect } from 'react';
 import theme from './styles/theme';
 import Appbar from './components/appbar';
 import Banner from './components/banner';
+import Footer from './components/footer';
+import Appdrawer from './components/drawer';
+import Searchbox from './components/search';
 
 function App() {
   useEffect(()=>{
@@ -20,16 +23,8 @@ function App() {
       >
         <Appbar />
         <Banner />
-        {
-          /*
-          Promotion
-          title
-          Products
-          footer
-          Search box
-          Appdrawer
-          */
-        }
+        <Footer/>
+        <Searchbox />
       </Container>
     </ThemeProvider>
   );

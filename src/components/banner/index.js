@@ -10,7 +10,7 @@ export default function Banner() {
 
     return (
         <BannerContainer>
-            <BannerImage src="/images/banner/5.jpg"/>
+            <BannerImage src="/images/banner/banner.jpeg"/>
             <BannerContent>
                 <BannerTitle variant='h2'>Building Designs</BannerTitle>
                 <BannerDescription variant="subtitle">for Sale</BannerDescription>
