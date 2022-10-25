@@ -5,12 +5,12 @@ import { Colors } from "../theme";
 import "@fontsource/montez"
 
 //container 
-export const AppbarContainer = styled(Box)(()=>({
+export const AppbarContainer = styled(Box)(({theme})=>({
     display: 'flex',
     marginTop: 4,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '2px 8px'
+    padding: '2px 8px',
 }));
 
 export const Logo = styled('img')(({src, theme}) =>({
@@ -24,8 +24,8 @@ export const Logo = styled('img')(({src, theme}) =>({
 //header 
 export const AppbarHeader = styled(Typography)(() => ({
     padding: "4px",
-    flexGrow: 0,
-    fontSize: "3em",
+    flexGrow: 1,
+    fontSize: "4em",
     fontFamily: '"Montez", "cursive',
     color: Colors.secondary,
   }));

@@ -11,8 +11,10 @@ export default function AppbarMobile({matches}) {
     return (
         <AppbarContainer>
             <Appdrawer />
-            <Logo src="/images/logo/logo2.jpg"/>
-            <Searchbox/>
+            <AppbarHeader textAlign={"center"} variant="h4">
+                 Jalalzai Designs
+            </AppbarHeader>
+            <Searchbox />
             <Actions matches = {matches} />
         </AppbarContainer>
      );
