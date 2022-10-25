@@ -1,7 +1,6 @@
-import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import { AppbarContainer, AppbarHeader, Logo, MyList } from "../../styles/appbar";
+import { ListItemText } from "@mui/material";
+import { AppbarContainer, Logo, MyList } from "../../styles/appbar";
 import Actions from "./actions";
-import SearchIcon from "@mui/icons-material/Search"
 import Searchbox from "../search";
 
 
