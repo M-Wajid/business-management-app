@@ -1,14 +1,14 @@
 import { Slide } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useEffect, useState } from "react";
-import { BannerContainer, BannerContent, BannerDescription, BannerImage, BannerTitle } from "../../styles/banner";
+import { BannerMainContainer, BannerContainer, BannerContent, BannerDescription, BannerImage, BannerTitle } from "../../styles/banner";
 
 const messages = [
     (
         <BannerContainer>
                 <BannerImage src="/images/banner/banner.jpeg"/>
                 <BannerContent>
-                    <BannerTitle variant='h2'>Building Designs</BannerTitle>
+                    <BannerTitle variant='h2'>Designs</BannerTitle>
                     <BannerDescription variant="subtitle">for Sale</BannerDescription>
                 </BannerContent>
         </BannerContainer>
@@ -59,14 +59,16 @@ export default function Banner() {
   }, []);
 
     return (
-        <Slide
-            direction= {show? "left" : "right"} in={show}
-            timeout={{
-                enter:500,
-                exit: 100,
-            }}
-        >
-            {messages[messageIndex]}
-        </Slide>
+        <BannerMainContainer>
+            <Slide
+                direction= {show? "left" : "right"} in={show}
+                timeout={{
+                    enter:500,
+                    exit: 100,
+                }}
+            >
+                    {messages[messageIndex]}
+            </Slide>
+        </BannerMainContainer>
     );
 }

@@ -2,14 +2,25 @@ import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 import { Colors } from "../theme";
 
+export const BannerMainContainer = styled(Box)(({theme})=>({
+    display: 'flex',
+    justifyContent: 'left',
+    width: '100', 
+    height: '100%',
+    background: Colors.white,
+    border: 'solid',
+    [theme.breakpoints.down('sm')]: {
+        flexDirection: 'column',
+        alignItems: 'center'
+    }
+}));
 export const BannerContainer = styled(Box)(({theme})=>({
     display: 'flex',
     justifyContent: 'center',
-    width: '97.8%', 
+    width: '100', 
     height: '100%',
     padding: '10px 10px',
     background: Colors.white,
-    border: 'solid',
     [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         alignItems: 'center'
@@ -18,10 +29,10 @@ export const BannerContainer = styled(Box)(({theme})=>({
 
 export const BannerImage = styled('img')(({src, theme}) =>({
     src: `url(${src})`,
-    width: '500px',
+    width: '600px',
     border: 'dashed',
     [theme.breakpoints.down('md')]:{
-        width: '300px' 
+        width: '400px' 
     }
 }));
 
@@ -30,7 +41,7 @@ export const BannerContent = styled(Box)(()=>({
     flexDirection: 'column',
     justifyContent: 'center',
     maxWidth: 420,
-    paddind: '30px'
+    padding: '30px'
 }));
 
 export const BannerTitle = styled(Typography)(({theme})=>({
