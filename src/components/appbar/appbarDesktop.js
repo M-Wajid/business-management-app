@@ -65,6 +65,7 @@ export default function AppbarDesktop({ matches }) {
           <ListItemButton>Projects</ListItemButton>
         </Link>
       </MyList>
+      
       <Searchbox />
       <Actions matches={matches} />
     </AppbarContainer>
