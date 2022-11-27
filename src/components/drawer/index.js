@@ -2,7 +2,7 @@ import { IconButton } from "@mui/material";
 import { Divider, Drawer, List, ListItemButton } from "@mui/material";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Colors } from "../../styles/theme";
+import { Link } from "react-router-dom";
 
 export default function Appdrawer() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -14,15 +14,67 @@ export default function Appdrawer() {
 
       <Drawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
         <List>
-          <ListItemButton sx={{ color: Colors.white }}>Home</ListItemButton>
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "White",
+              fontSize: "22px",
+              fontWeight: "bold",
+            }}
+            to="/"
+          >
+            <ListItemButton>Home</ListItemButton>
+          </Link>
           <Divider variant="middle" />
-          <ListItemButton sx={{ color: Colors.white }}>Designs</ListItemButton>
+
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "White",
+              fontSize: "22px",
+              fontWeight: "bold",
+            }}
+            to="/designs"
+          >
+            <ListItemButton>Designs</ListItemButton>
+          </Link>
           <Divider variant="middle" />
-          <ListItemButton sx={{ color: Colors.white }}>Services</ListItemButton>
+
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "White",
+              fontSize: "22px",
+              fontWeight: "bold",
+            }}
+            to="/services"
+          >
+            <ListItemButton>Services</ListItemButton>
+          </Link>
           <Divider variant="middle" />
-          <ListItemButton sx={{ color: Colors.white }}>Porfolio</ListItemButton>
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "White",
+              fontSize: "22px",
+              fontWeight: "bold",
+            }}
+            to="/portfolio"
+          >
+            <ListItemButton>Porfolio</ListItemButton>
+          </Link>
           <Divider variant="middle" />
-          <ListItemButton sx={{ color: Colors.white }}>Projects</ListItemButton>
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "White",
+              fontSize: "22px",
+              fontWeight: "bold",
+            }}
+            to="/projects"
+          >
+            <ListItemButton>Projects</ListItemButton>
+          </Link>
         </List>
       </Drawer>
     </>
