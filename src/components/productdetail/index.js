@@ -35,8 +35,8 @@ const ProductDetailInfoWrapper = styled(Box)(() => ({
 }));
 
 export default function ProductDetail({ open, onClose, product }) {
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Dialog
       TransitionComponent={SlideTransition}
@@ -61,7 +61,10 @@ export default function ProductDetail({ open, onClose, product }) {
         </Box>
       </DialogTitle>
       <DialogContent>
-        <ProductDetailWrapper display={"flex"} flexDirection={matches ? "column" : "row"}>
+        <ProductDetailWrapper
+          display={"flex"}
+          flexDirection={matches ? "column" : "row"}
+        >
           <Product sx={{ mr: 4 }}>
             <ProductImage src={product.image} />
           </Product>
@@ -82,8 +85,8 @@ export default function ProductDetail({ open, onClose, product }) {
               justifyContent="space-between"
             >
               <FacebookIcon />
-              <TwitterIcon  />
-              <InstagramIcon  />
+              <TwitterIcon />
+              <InstagramIcon />
               <Button variant="contained">Contact no.</Button>
             </Box>
           </ProductDetailInfoWrapper>

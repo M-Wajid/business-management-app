@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Button} from "@mui/material";
+import { Button } from "@mui/material";
 import { Box } from "@mui/system";
 import { slideInBottom } from "../../animation";
 import { Colors } from "../theme";
@@ -18,13 +18,12 @@ export const ProductImage = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
   width: "100%",
   background: Colors.light_gray,
-  padding: '10px',
+  padding: "10px",
   [theme.breakpoints.down("md")]: {
-    width: "80%", 
-    padding: '24px',
+    width: "80%",
+    padding: "24px",
   },
 }));
-
 
 export const ProductAddToCart = styled(Button, {
   shouldForwardProp: (prop) => prop !== "show",
@@ -32,7 +31,7 @@ export const ProductAddToCart = styled(Button, {
   width: "120px",
   fontSize: "12px",
   [theme.breakpoints.up("md")]: {
-    position: "absolute",    
+    position: "absolute",
     bottom: "2%",
     width: "300px",
     padding: "10px 5px",
@@ -44,12 +43,9 @@ export const ProductAddToCart = styled(Button, {
   opacity: 0.9,
 }));
 
-export const ProductMetaWrapper = styled(Box)(({theme}) => ({
+export const ProductMetaWrapper = styled(Box)(({ theme }) => ({
   padding: 4,
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
 }));
-
-
-

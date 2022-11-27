@@ -3,14 +3,16 @@ import { useTheme } from "@mui/material/styles";
 import AppbarDesktop from "./appbarDesktop";
 import AppbarMobile from "./appbarMobile";
 
-
 export default function Appbar() {
-
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down('md'));
-    return (
-        <>
-            {matches ? <AppbarMobile matches = {matches} /> : <AppbarDesktop matches = {matches} />}
-        </>
-    );
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
+  return (
+    <>
+      {matches ? (
+        <AppbarMobile matches={matches} />
+      ) : (
+        <AppbarDesktop matches={matches} />
+      )}
+    </>
+  );
 }

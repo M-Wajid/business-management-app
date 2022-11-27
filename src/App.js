@@ -1,29 +1,47 @@
-import { ThemeProvider } from '@mui/system';
-import {Container} from '@mui/material';
-import { useEffect } from 'react';
-import theme from './styles/theme';
-import Appbar from './components/appbar';
-import Banner from './components/banner';
-import Footer from './components/footer';
-import Products from './components/products';
+import { ThemeProvider } from "@mui/system";
+import { Container } from "@mui/material";
+import { useEffect } from "react";
+import theme from "./styles/theme";
+import Appbar from "./components/appbar";
+import Banner from "./components/banner";
+import Footer from "./components/footer";
+import Products from "./components/products";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
-  useEffect(()=>{
+  useEffect(() => {
     document.title = "Business Management App";
-  },[]);
-  
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Container
-        maxwidth = "xl"
-        sx = {{
-          backgroud: '#fff'
+        maxwidth="xl"
+        sx={{
+          backgroud: "#fff",
         }}
       >
         <Appbar />
-        <Banner />
-        <Products />
-        <Footer/>
+        <Switch>
+          <Route exact path="/designs">
+            <Products />
+          </Route>
+          <Route exact path="/services">
+            <Products />
+          </Route>
+          <Route exact path="/portfolio">
+            <Products />
+          </Route>
+          <Route exact path="/projects">
+            <Products />
+          </Route>
+          <Route exact path="/">
+            <Banner />
+            <Products />
+          </Route>
+        </Switch>
+        <Footer />
       </Container>
     </ThemeProvider>
   );
