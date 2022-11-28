@@ -1,5 +1,5 @@
 import { ListItemButton } from "@mui/material";
-import { AppbarContainer, Logo, MyList } from "../../styles/appbar";
+import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
 import Actions from "./actions";
 import Searchbox from "../search";
 import { Link } from "react-router-dom";
@@ -7,14 +7,16 @@ import { Link } from "react-router-dom";
 export default function AppbarDesktop({ matches }) {
   return (
     <AppbarContainer>
-      <Logo src="/images/logo/logo2.jpg" />
+      <AppbarHeader textAlign={"center"} variant="h4">
+        Jalalzai Designs
+      </AppbarHeader>
       <MyList type="row">
         <Link
           style={{
             textDecoration: "none",
-            color: "#696969",
-            fontSize: "22px",
-            fontWeight: "bold",
+            color: "black",
+            fontSize: "19px",
+            flexGrow: 0.5,
           }}
           to="/"
         >
@@ -23,9 +25,9 @@ export default function AppbarDesktop({ matches }) {
         <Link
           style={{
             textDecoration: "none",
-            color: "#696969",
-            fontSize: "22px",
-            fontWeight: "bold",
+            color: "black",
+            fontSize: "19px",
+            flexGrow: 0.5,
           }}
           to="/designs"
         >
@@ -34,9 +36,9 @@ export default function AppbarDesktop({ matches }) {
         <Link
           style={{
             textDecoration: "none",
-            color: "#696969",
-            fontSize: "22px",
-            fontWeight: "bold",
+            color: "black",
+            fontSize: "19px",
+            flexGrow: 0.5,
           }}
           to="/services"
         >
@@ -45,9 +47,9 @@ export default function AppbarDesktop({ matches }) {
         <Link
           style={{
             textDecoration: "none",
-            color: "#696969",
-            fontSize: "22px",
-            fontWeight: "bold",
+            color: "black",
+            fontSize: "19px",
+            flexGrow: 0.5,
           }}
           to="/portfolio"
         >
@@ -56,16 +58,16 @@ export default function AppbarDesktop({ matches }) {
         <Link
           style={{
             textDecoration: "none",
-            color: "#696969",
-            fontSize: "22px",
-            fontWeight: "bold",
+            color: "black",
+            fontSize: "19px",
+            flexGrow: 0.5,
           }}
           to="/projects"
         >
           <ListItemButton>Projects</ListItemButton>
         </Link>
       </MyList>
-      
+
       <Searchbox />
       <Actions matches={matches} />
     </AppbarContainer>

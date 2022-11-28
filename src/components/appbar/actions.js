@@ -21,7 +21,7 @@ export default function Actions({matches}) {
                         sx ={{
                             display: 'flex',
                             justifyContent: "center",
-                            color: matches && Colors.secondary,
+                            color: Colors.black,
                         }}
                     >
                         <LoginIcon />
@@ -39,7 +39,7 @@ export default function Actions({matches}) {
                         sx ={{
                             display: 'flex',
                             justifyContent: "center",
-                            color: matches && Colors.secondary,
+                            color: Colors.black,
                         }}
                     >
                         <LogoutIcon />
@@ -58,7 +58,7 @@ export default function Actions({matches}) {
                         sx ={{
                             display: 'flex',
                             justifyContent: "center",
-                            color: matches && Colors.secondary,
+                            color: Colors.black,
                         }}
                     >
                         <PersonIcon />

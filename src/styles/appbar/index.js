@@ -7,7 +7,7 @@ import "@fontsource/montez";
 //container
 export const AppbarContainer = styled(Box)(({ theme }) => ({
   display: "flex",
-  marginTop: 4,
+  background: Colors.dim_grey,
   justifyContent: "center",
   alignItems: "center",
   padding: "2px 8px",
@@ -27,7 +27,6 @@ export const AppbarHeader = styled(Typography)(() => ({
   flexGrow: 1,
   fontSize: "4em",
   fontFamily: '"Montez", "cursive',
-  color: Colors.secondary,
 }));
 
 export const MyList = styled(List)(({ type }) => ({

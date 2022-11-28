@@ -17,7 +17,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Container
-        maxwidth="xl"
+        disableGutters
+        maxWidth="xl"
         sx={{
           backgroud: "#fff",
         }}

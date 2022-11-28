@@ -4,11 +4,11 @@ import { Colors } from "../theme";
 
 export const BannerMainContainer = styled(Box)(({ theme }) => ({
   display: "flex",
-  justifyContent: "left",
-  width: "100",
+  justifyContent: "Center",
+  width: "100%",
   height: "100%",
-  background: Colors.white,
-  border: "solid",
+  background: Colors.dove_gray,
+  marginBottom: 10,
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
     alignItems: "center",
@@ -20,7 +20,7 @@ export const BannerContainer = styled(Box)(({ theme }) => ({
   width: "100",
   height: "100%",
   padding: "10px 10px",
-  background: Colors.white,
+  background: Colors.dove_gray,
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
     alignItems: "center",

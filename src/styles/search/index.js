@@ -18,17 +18,17 @@ export const SearchBoxContainer = styled(Box)(({ theme }) => ({
 
 export const SearchField = styled(TextField)(({ theme }) => ({
   ".MuiInputLabel-root": {
-    color: Colors.white,
+    color: Colors.black,
   },
   ".MuiInput-root": {
     fontSize: "1rem",
     [theme.breakpoints.up("md")]: {
       fontSize: "2rem",
     },
-    color: Colors.white,
+    color: Colors.black,
   },
   ".MuiInput-root::before": {
-    borderBottom: `1px solid ${Colors.white}`,
+    borderBottom: `1px solid ${Colors.black}`,
   },
   padding: "0 0 0 40px",
 }));
