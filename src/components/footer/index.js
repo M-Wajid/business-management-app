@@ -43,33 +43,6 @@ export default function Footer() {
             <InstagramIcon />
           </Box>
         </Grid>
-
-        <Grid item md={6} lg={2}>
-          <FooterTitle variant="body1">Information</FooterTitle>
-          <List>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                About Us
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                Address
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                Phone Number
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                Email ID
-              </Typography>
-            </ListItemText>
-          </List>
-        </Grid>
-
         <Grid item md={6} lg={4}>
           <FooterTitle variant="body1">newsletter</FooterTitle>
           <List>
