@@ -1,7 +1,6 @@
 import { AppbarContainer, AppbarHeader } from "../../styles/appbar";
 import Appdrawer from "../drawer";
-import Searchbox from "../search";
-import Actions from "./actions";
+import LoginAdmin from "../login";
 
 export default function AppbarMobile({ matches }) {
   return (
@@ -10,8 +9,7 @@ export default function AppbarMobile({ matches }) {
       <AppbarHeader textAlign={"center"} variant="h4">
         Jalalzai Designs
       </AppbarHeader>
-      <Searchbox />
-      <Actions matches={matches} />
+      <LoginAdmin />
     </AppbarContainer>
   );
 }
