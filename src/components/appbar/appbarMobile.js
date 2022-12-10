@@ -1,6 +1,7 @@
 import { AppbarContainer, AppbarHeader } from "../../styles/appbar";
 import Appdrawer from "../drawer";
 import Searchbox from "../search";
+import Actions from "./actions";
 
 export default function AppbarMobile({ matches }) {
   return (
@@ -10,6 +11,7 @@ export default function AppbarMobile({ matches }) {
         Jalalzai Designs
       </AppbarHeader>
       <Searchbox />
+      <Actions matches={matches} />
     </AppbarContainer>
   );
 }
