@@ -1,6 +1,5 @@
 import { ListItemButton } from "@mui/material";
 import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
-import Actions from "./actions";
 import Searchbox from "../search";
 import { Link } from "react-router-dom";
 
@@ -69,7 +68,6 @@ export default function AppbarDesktop({ matches }) {
       </MyList>
 
       <Searchbox />
-      <Actions matches={matches} />
     </AppbarContainer>
   );
 }

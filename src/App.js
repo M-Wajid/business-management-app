@@ -26,7 +26,7 @@ function App() {
         <Appbar />
         <Switch>
           <Route exact path="/designs">
-            <Products />
+             <Products /> 
           </Route>
           <Route exact path="/services">
             <Products />
