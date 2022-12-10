@@ -8,6 +8,10 @@ import Footer from "./components/footer";
 import Products from "./components/products";
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import SignIn from "./components/sign-in/signin";
+import DeleteDesign from "./components/delete-design";
+import UpdateDesign from "./components/update-design";
+import CreateDesign from "./components/create-design";
 
 function App() {
   useEffect(() => {
@@ -36,6 +40,18 @@ function App() {
           </Route>
           <Route exact path="/projects">
             <Products />
+          </Route>
+          <Route exact path="/sign-in">
+            <SignIn />
+          </Route>
+          <Route exact path="/update-design">
+            <UpdateDesign />
+          </Route>
+          <Route exact path="/delete-design">
+            <DeleteDesign />
+          </Route>
+          <Route exact path="/create-design">
+            <CreateDesign />
           </Route>
           <Route exact path="/">
             <Banner />

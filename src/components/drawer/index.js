@@ -75,6 +75,18 @@ export default function Appdrawer() {
           >
             <ListItemButton>Projects</ListItemButton>
           </Link>
+          <Divider variant="middle" />
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "White",
+              fontSize: "22px",
+              fontWeight: "bold",
+            }}
+            to="/sign-in"
+          >
+            <ListItemButton>SignIn</ListItemButton>
+          </Link>
         </List>
       </Drawer>
     </>

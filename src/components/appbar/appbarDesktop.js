@@ -1,7 +1,6 @@
 import { ListItemButton } from "@mui/material";
 import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
 import { Link } from "react-router-dom";
-import LoginAdmin from "../login";
 
 export default function AppbarDesktop({ matches }) {
   return (
@@ -65,7 +64,17 @@ export default function AppbarDesktop({ matches }) {
         >
           <ListItemButton>Projects</ListItemButton>
         </Link>
-        <LoginAdmin />
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "black",
+            fontSize: "19px",
+            flexGrow: 0.5,
+          }}
+          to="/sign-in"
+        >
+          <ListItemButton>SignIn</ListItemButton>
+        </Link>
       </MyList>
     </AppbarContainer>
   );

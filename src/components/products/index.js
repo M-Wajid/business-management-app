@@ -3,24 +3,16 @@ import SingleProduct from "./SingleProduct";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import SingleProductDesktop from "./SingleProductDesktop";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { ProductsContext } from "../../context/productContext";
 
 export default function Products() {
-const [productsNew, setProductsNew]= useState([])
-useEffect(()=> {
-  const API= "/api/v1/designs";
-  axios.get(API).then(res=> {
-    console.log (res.data.data.designs)
-    setProductsNew(res.data.data.designs)
-  })
-
-}, [])
+const {products} = useContext(ProductsContext)
 
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-  const renderProducts = productsNew.map((product) => (
+  const renderProducts = products.map((product) => (
     <Grid
       item
       key={product.id}
