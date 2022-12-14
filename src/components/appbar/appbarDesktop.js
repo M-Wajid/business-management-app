@@ -71,9 +71,9 @@ export default function AppbarDesktop({ matches }) {
             fontSize: "19px",
             flexGrow: 0.5,
           }}
-          to="/sign-in"
+          to="/login"
         >
-          <ListItemButton>SignIn</ListItemButton>
+          <ListItemButton>Login</ListItemButton>
         </Link>
       </MyList>
     </AppbarContainer>

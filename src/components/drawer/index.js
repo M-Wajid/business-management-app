@@ -83,9 +83,9 @@ export default function Appdrawer() {
               fontSize: "22px",
               fontWeight: "bold",
             }}
-            to="/sign-in"
+            to="/login"
           >
-            <ListItemButton>SignIn</ListItemButton>
+            <ListItemButton>Login</ListItemButton>
           </Link>
         </List>
       </Drawer>
