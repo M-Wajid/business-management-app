@@ -9,9 +9,13 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
 import axios from "axios";
 
+import AuthUser from '../sign-in/auth-user';
+
 const theme = createTheme();
 
 export default function CreateDesign() {
+
+  const {config} = AuthUser();
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -44,7 +48,7 @@ export default function CreateDesign() {
     if (price.length !== 0) newBody.price = price;
 
     console.log(newBody);
-    await axios.post(API, newBody);
+    await axios.post(API, newBody, config);
     alert("Data Posted");
     window.location.reload();
   };

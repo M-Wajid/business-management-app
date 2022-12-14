@@ -11,9 +11,14 @@ import { useState } from "react";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import axios from "axios";
 
+import AuthUser from '../sign-in/auth-user';
+
 const theme = createTheme();
 
 export default function DeleteDesign() {
+
+  const {config} = AuthUser();
+
   const { products } = useContext(ProductsContext);
 
   const [oldName, setOldName] = useState("");
@@ -28,7 +33,7 @@ export default function DeleteDesign() {
     const id = products[index]._id;
     const API = `/api/v1/designs/${id}`;
 
-    await axios.delete(API);
+    await axios.delete(API,config);
     alert("Data deleted");
     window.location.reload();
   };

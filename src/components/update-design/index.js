@@ -12,9 +12,14 @@ import { useState } from "react";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import axios from "axios";
 
+import AuthUser from '../sign-in/auth-user';
+
 const theme = createTheme();
 
 export default function UpdateDesign() {
+
+  const {config} = AuthUser();
+
   const { products } = useContext(ProductsContext);
 
   const [oldName, setOldName] = useState("");
@@ -54,7 +59,7 @@ export default function UpdateDesign() {
     if (price.length !== 0) newBody.price = price;
 
     console.log(newBody);
-    await axios.patch(API, newBody);
+    await axios.patch(API, newBody, config);
     alert("Data Updated");
     window.location.reload();
   };
