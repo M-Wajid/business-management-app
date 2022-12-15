@@ -30,6 +30,7 @@ export const BannerContainer = styled(Box)(({ theme }) => ({
 export const BannerImage = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
   width: "600px",
+  height: "300px",
   border: "dashed",
   [theme.breakpoints.down("md")]: {
     width: "400px",

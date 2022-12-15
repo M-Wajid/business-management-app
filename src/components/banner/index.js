@@ -14,21 +14,21 @@ const messages = [
     <BannerImage src="/images/banner/banner.jpeg" />
     <BannerContent>
       <BannerTitle variant="h2">Designs</BannerTitle>
-      <BannerDescription variant="subtitle">for Sale</BannerDescription>
+      <BannerDescription variant="subtitle">We sell architectural designs acooring to the customer's requirements.</BannerDescription>
     </BannerContent>
   </BannerContainer>,
   <BannerContainer>
-    <BannerImage src="/images/banner/banner.jpeg" />
+    <BannerImage src="/images/banner/banner2.jpg" />
     <BannerContent>
-      <BannerTitle variant="h2">temp</BannerTitle>
-      <BannerDescription variant="subtitle">temp</BannerDescription>
+      <BannerTitle variant="h2">Services</BannerTitle>
+      <BannerDescription variant="subtitle">We provide all the services from survey to structure completion.</BannerDescription>
     </BannerContent>
   </BannerContainer>,
   <BannerContainer>
-    <BannerImage src="/images/banner/banner.jpeg" />
+    <BannerImage src="/images/banner/banner3.jpg" />
     <BannerContent>
-      <BannerTitle variant="h2">temp2</BannerTitle>
-      <BannerDescription variant="temp">temp2</BannerDescription>
+      <BannerTitle variant="h2">Projects</BannerTitle>
+      <BannerDescription variant="temp">We have done numerous projects including big projects like designing masterplan of Singar Housing Scheme Gawadar.</BannerDescription>
     </BannerContent>
   </BannerContainer>,
 ];
