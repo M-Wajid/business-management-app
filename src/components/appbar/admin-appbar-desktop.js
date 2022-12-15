@@ -1,8 +1,10 @@
 import { ListItemButton } from "@mui/material";
 import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
 import { Link } from "react-router-dom";
+import AuthUser from "../sign-in/auth-user";
 
-export default function AppbarDesktop({ matches }) {
+export default function AppbarDesktopAdmin({ matches }) {
+  const {logout} = AuthUser();
   return (
     <AppbarContainer>
       <AppbarHeader textAlign={"center"} variant="h4">
@@ -42,7 +44,7 @@ export default function AppbarDesktop({ matches }) {
         >
           <ListItemButton>Services</ListItemButton>
         </Link>
-        <Link
+        {/* <Link
           style={{
             textDecoration: "none",
             color: "black",
@@ -52,7 +54,7 @@ export default function AppbarDesktop({ matches }) {
           to="/portfolio"
         >
           <ListItemButton>Porfolio</ListItemButton>
-        </Link>
+        </Link> */}
         <Link
           style={{
             textDecoration: "none",
@@ -64,17 +66,17 @@ export default function AppbarDesktop({ matches }) {
         >
           <ListItemButton>Projects</ListItemButton>
         </Link>
-        <Link
+        <ListItemButton
           style={{
             textDecoration: "none",
             color: "black",
             fontSize: "19px",
             flexGrow: 0.5,
           }}
-          to="/login"
+          onClick={logout}
         >
-          <ListItemButton>Login</ListItemButton>
-        </Link>
+          Logout
+        </ListItemButton>
       </MyList>
     </AppbarContainer>
   );

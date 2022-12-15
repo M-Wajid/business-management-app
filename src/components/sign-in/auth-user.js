@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
-
+import {useNavigate} from "react-router-dom"
 
 
 export default function AuthUser(){
+    const navigate = useNavigate();
 
     const getToken = () =>{
         const tokenString = sessionStorage.getItem('token');
@@ -26,6 +27,12 @@ export default function AuthUser(){
 
         setToken(token);
         setUser(user);
+        navigate('/');
+    }
+
+    const logout = () => {
+        sessionStorage.clear();
+        navigate('/login');
     }
 
     const http = axios.create({
@@ -44,6 +51,7 @@ export default function AuthUser(){
         user,
         getToken,
         config,
-        http
+        http,
+        logout
     }
 }

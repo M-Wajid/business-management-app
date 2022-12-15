@@ -2,16 +2,16 @@ import { ThemeProvider } from "@mui/system";
 import { Container } from "@mui/material";
 import { useEffect } from "react";
 import theme from "./styles/theme";
-import Appbar from "./components/appbar";
-import Banner from "./components/banner";
-import Footer from "./components/footer";
-import Products from "./components/products";
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-import SignIn from "./components/sign-in/signin";
-import DeleteDesign from "./components/delete-design";
-import UpdateDesign from "./components/update-design";
-import CreateDesign from "./components/create-design";
+import { Routes, Route } from "react-router-dom";
+import Footer from "./components/footer";
+import Home from "./pages/home";
+import Designs from "./pages/designs";
+import Login from "./pages/login";
+// import Porfolio from "./pages/porfolio";
+import Projects from "./pages/projects";
+import Services from "./pages/services";
+import Admin from "./pages/admin";
 
 function App() {
   useEffect(() => {
@@ -27,37 +27,15 @@ function App() {
           backgroud: "#fff",
         }}
       >
-        <Appbar />
-        <Switch>
-          <Route exact path="/designs">
-             <Products /> 
-          </Route>
-          <Route exact path="/services">
-            <Products />
-          </Route>
-          <Route exact path="/portfolio">
-            <Products />
-          </Route>
-          <Route exact path="/projects">
-            <Products />
-          </Route>
-          <Route exact path="/login">
-            <SignIn />
-          </Route>
-          <Route exact path="/update-design">
-            <UpdateDesign />
-          </Route>
-          <Route exact path="/delete-design">
-            <DeleteDesign />
-          </Route>
-          <Route exact path="/create-design">
-            <CreateDesign />
-          </Route>
-          <Route exact path="/">
-            <Banner />
-            <Products />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Home />}/>
+          <Route exact path="/designs" element={<Designs />} />
+          <Route exact path="/services" element={<Services />} />
+          {/* <Route exact path="/portfolio" element={<Porfolio />} /> */}
+          <Route exact path="/projects" element={<Projects />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/admin" element={<Admin />} />
+        </Routes>
         <Footer />
       </Container>
     </ThemeProvider>

@@ -52,7 +52,7 @@ export default function Appdrawer() {
             <ListItemButton>Services</ListItemButton>
           </Link>
           <Divider variant="middle" />
-          <Link
+          {/* <Link
             style={{
               textDecoration: "none",
               color: "White",
@@ -62,7 +62,7 @@ export default function Appdrawer() {
             to="/portfolio"
           >
             <ListItemButton>Porfolio</ListItemButton>
-          </Link>
+          </Link> */}
           <Divider variant="middle" />
           <Link
             style={{

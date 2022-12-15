@@ -11,10 +11,10 @@ export const ProductsProvider = ({ children }) => {
 
 
   useEffect(()=> {
-    const API= "/api/v1/designs";
+    const API= "/api/v1/products";
     axios.get(API).then(res=> {
-      console.log (res.data.data.designs)
-      setProducts(res.data.data.designs)
+      console.log (res.data.data.products)
+      setProducts(res.data.data.products)
     })
   
   }, [])

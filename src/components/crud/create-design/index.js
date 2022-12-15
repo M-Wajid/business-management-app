@@ -9,7 +9,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
 import axios from "axios";
 
-import AuthUser from '../sign-in/auth-user';
+import AuthUser from '../../sign-in/auth-user';
 
 const theme = createTheme();
 

@@ -9,11 +9,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
 import AuthUser from './auth-user';
 
-
-
 const theme = createTheme();
 
 export default function SignIn() {
+
   const {http,setToken} = AuthUser();
   const [email,setEmail] = useState();
   const [password,setPassword] = useState();
@@ -23,8 +22,7 @@ export default function SignIn() {
     http.post('/signin',{email:email,password:password}).then((res)=>{;
       setToken(res.data.user,res.data.token);
     })
-    alert("Admin Logged in");
-    window.location.reload();
+    // alert("Admin Logged in");
   }
 
   return (

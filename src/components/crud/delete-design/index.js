@@ -6,12 +6,12 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useContext } from "react";
-import { ProductsContext } from "../../context/productContext";
+import { ProductsContext } from "../../../context/productContext";
 import { useState } from "react";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import axios from "axios";
 
-import AuthUser from '../sign-in/auth-user';
+import AuthUser from '../../sign-in/auth-user';
 
 const theme = createTheme();
 
@@ -51,7 +51,7 @@ export default function DeleteDesign() {
           }}
         >
           <Typography component="h1" variant="h5">
-            Update Design
+            Delete Design
           </Typography>
           <Box component="form" noValidate sx={{ mt: 1 }}>
             <FormControl fullWidth>
