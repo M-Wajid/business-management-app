@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useContext } from "react";
-import { ProductsContext } from "../../../context/productContext";
+import { DesignsContext } from "../../../context/designContext";
 import { useState } from "react";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import axios from "axios";
@@ -19,7 +19,7 @@ export default function DeleteDesign() {
 
   const {config} = AuthUser();
 
-  const { products } = useContext(ProductsContext);
+  const { designs } = useContext(DesignsContext);
 
   const [oldName, setOldName] = useState("");
 
@@ -29,8 +29,8 @@ export default function DeleteDesign() {
 
 
   const deleteData = async () => {
-    var index = products.findIndex((item) => item.name === oldName);
-    const id = products[index]._id;
+    var index = designs.findIndex((item) => item.name === oldName);
+    const id = designs[index]._id;
     const API = `/api/v1/designs/${id}`;
 
     await axios.delete(API,config);
@@ -62,7 +62,7 @@ export default function DeleteDesign() {
                 label="Select Name"
                 onChange={handleOldName}
               >
-                {products.map(({ name }) => (
+                {designs.map(({ name }) => (
                 <MenuItem value={name}>{name}</MenuItem>
               ))}
               </Select>

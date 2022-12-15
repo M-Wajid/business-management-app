@@ -6,31 +6,22 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useContext } from "react";
-import { ProductsContext } from "../../../context/productContext";
 import { useState } from "react";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import axios from "axios";
 
 import AuthUser from '../../sign-in/auth-user';
 
 const theme = createTheme();
 
-export default function UpdateDesign() {
+export default function CreateProduct() {
 
   const {config} = AuthUser();
 
-  const { products } = useContext(ProductsContext);
-
-  const [oldName, setOldName] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDesciption] = useState("");
   const [imgUrl, setImgUrl] = useState("");
 
-  const handleOldName = (event) => {
-    setOldName(event.target.value);
-  };
   const handleName = (event) => {
     setName(event.target.value);
   };
@@ -44,10 +35,8 @@ export default function UpdateDesign() {
     setPrice(event.target.value);
   };
 
-  const updateData = async () => {
-    var index = products.findIndex((item) => item.name === oldName);
-    const id = products[index]._id;
-    const API = `/api/v1/designs/${id}`;
+  const postData = async () => {
+    const API = `/api/v1/products`;
 
     const newBody = {};
 
@@ -59,8 +48,8 @@ export default function UpdateDesign() {
     if (price.length !== 0) newBody.price = price;
 
     console.log(newBody);
-    await axios.patch(API, newBody, config);
-    alert("Data Updated");
+    await axios.post(API, newBody, config);
+    alert("Data Posted");
     window.location.reload();
   };
 
@@ -77,28 +66,15 @@ export default function UpdateDesign() {
           }}
         >
           <Typography component="h1" variant="h5">
-            Update Design
+            Create Product
           </Typography>
           <Box component="form" noValidate sx={{ mt: 1 }}>
-            <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Select Name</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                label="Select Name"
-                onChange={handleOldName}
-              >
-                {products.map(({ name }) => (
-                <MenuItem value={name}>{name}</MenuItem>
-              ))}
-              </Select>
-            </FormControl>
             <TextField
               margin="normal"
               required
               fullWidth
               value={name}
-              label="New Name"
+              label="Name"
               onChange={handleName}
             />
             <TextField
@@ -106,14 +82,14 @@ export default function UpdateDesign() {
               required
               fullWidth
               value={price}
-              label="New Price"
+              label="Price"
               onChange={handlePrice}
             />
             <TextField
               margin="normal"
               required
               fullWidth
-              label="New Description"
+              label="Description"
               value={description}
               onChange={handleDescription}
             />
@@ -122,7 +98,7 @@ export default function UpdateDesign() {
               required
               fullWidth
               value={imgUrl}
-              label="New Image URL"
+              label="Image URL"
               onChange={handleUrl}
             />
             <Button
@@ -130,9 +106,9 @@ export default function UpdateDesign() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={updateData}
+              onClick={postData}
             >
-              Update
+              Post
             </Button>
           </Box>
         </Box>
