@@ -50,13 +50,16 @@ export default function SignIn() {
               required
               fullWidth
               label="Email Address"
+              autoComplete="off"
               onChange={e=>setEmail(e.target.value)}
             />
             <TextField
+              type="password"
               margin="normal"
               required
               fullWidth
               label="Password"
+              autoComplete="off"
               onChange={e=>setPassword(e.target.value)}
             />
             <Button

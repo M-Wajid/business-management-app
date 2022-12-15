@@ -66,6 +66,17 @@ export default function AppbarDesktopAdmin({ matches }) {
         >
           <ListItemButton>Projects</ListItemButton>
         </Link>
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "black",
+            fontSize: "19px",
+            flexGrow: 0.5,
+          }}
+          to="/admin"
+        >
+          <ListItemButton>Admin</ListItemButton>
+        </Link>
         <ListItemButton
           style={{
             textDecoration: "none",
